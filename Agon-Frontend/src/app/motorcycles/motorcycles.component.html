@@ -1,0 +1,233 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let motorcycle of motorcycles">
+        <div class="card">
+            <img class="card-img-top" src="{{motorcycle.url}}" alt="Card image">
+            <div class="card-body">
+                <div class="main">
+                <h3 class="card-title">{{motorcycle.name}}</h3>
+                <p class="card-text">{{motorcycle.matter}}</p>
+            </div>
+                <p class="text-right">
+                    <a href="#" class="btn btn-primary" routerLink="/motorcycles/{{ motorcycle.route }}">Explore</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="main">
+    <div class="card" style="width: 18rem;">
+        <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20220121045203_Dominar400.jpg&w=726&h=482&q=75&c=1"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Dominar 400</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a class="btn btn-primary" routerLink="dominar400">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://cdn.bajajauto.com/-/media/assets/bajajauto/bikes/dominar-250/gallery/popup/7.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Dominar 250</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+          <a class="btn btn-primary" routerLink="dominar250">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/106487/right-front-three-quarter-2.jpeg?isig=0&q=100"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar N250</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="n250">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/106485/right-front-three-quarter-2.jpeg?isig=0"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar F250</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="f250">Explore</a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="card" style="width: 18rem;">
+        <img src="https://e1.pxfuel.com/desktop-wallpaper/457/314/desktop-wallpaper-for-pc-new-bajaj-pulsar-220f-2013-price-review-specifications-mileage-topspeed-and-220-f.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar 220F</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="f220">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20150407115543_1.JPG"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar RS200</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="rs200">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/58025/pulsar-ns-right-front-three-quarter-6.jpeg?isig=0&q=100"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar NS200</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="ns200">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/124645/pulsar-n160-right-front-three-quarter.jpeg?isig=0&q=100"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar N160</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="n160">Explore</a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/148807/pulsar-ns-160-right-front-three-quarter.jpeg?isig=0&q=100"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar NS160</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="ns160">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.motoroids.com/wp-content/uploads/2024/01/Bajaj-3.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar N150</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="n150">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/48747/bajaj-avenger-street-160-front-three-quarter0.jpeg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Avenger Street 150</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary"  routerLink="avenger">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://bd.gaadicdn.com/processedimages/bajaj/bajaj-pulsar-150/source/bajaj-pulsar-15064dd901074840.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar 150</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="pulsar150">Explore</a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/57695/pulsar-ns125-right-front-three-quarter.jpeg?q=100"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar NS125</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="ns125">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://bd.gaadicdn.com/processedimages/bajaj/pulsar-125/source/pulsar-12564dc5ac8b74ba.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Pulsar 125</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="pulsar125">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/129243/ct-125x-right-front-three-quarter.jpeg?isig=0"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj CT 125X</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="ct125">Explore</a>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <img src="https://imgd.aeplcdn.com/1280x720/bw/ec/41413/Bajaj-Platina-110-HGear-Front-threequarter-164847.jpg?wm=0"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Platina 110</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="platina">Explore</a>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+    <div class="card" style="width: 18rem;">
+        <img src="https://blog.gaadikey.com/wp-content/uploads/2023/02/Bajaj_Chetak_Electric_1059.jpg"
+            class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Bajaj Chetak</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.</p>
+            <a href="#" class="btn btn-primary" routerLink="chetak" >Explore</a>
+        </div>
+    </div>
+    
+</div>
+
+<router-outlet></router-outlet>
+
+<img src="https://ic.maxabout.us//bikes/bajaj/bajaj-dominar-400//2022-Bajaj-Dominar-400-Launhced-4.jpg">
+<img src="https://cdn.bajajauto.com/-/media/assets/bajajauto/360degreeimages/bikes/dominar/dominar-250-red/00.png">
+<img src="https://imgd.aeplcdn.com/1280x720/n/cw/ec/106487/right-front-three-quarter-2.jpeg?isig=0&q=100">
+<img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/Galleries/20150407115543_1.JPG">
+<img src="https://cdn.bajajauto.com/-/media/assets/bajajauto/360degreeimages/bikes/pulsar/pulsar-rs-200/red/00.png">
+<img src=""> -->

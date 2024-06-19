@@ -1,0 +1,54 @@
+<div class="main" *ngFor="let ktmModel of ktmModels">
+
+    <div class="image">
+        <img src="{{ktmModel.url}}">
+    </div>
+
+    <div class="body">
+        <p><b>Engine:</b>{{ktmModel.engine}}</p>
+        <p><b>Performance:</b> {{ktmModel.performance}}</p>
+        <p><b>Design:</b>{{ktmModel.design}}</p>
+        <p><b>Features:</b>{{ktmModel.features}}</p>
+        <p><b>Suspension and Brakes:</b>{{ktmModel.suspensionAndBrakes}}</p>
+        <p><b>Price:</b>{{ktmModel.price}}</p>
+        <p>{{ktmModel.overAll}}</p>
+    </div>
+    
+    <div>
+        <table border="2px solid grey">
+            <th>Key Specifications</th>
+            <tr>
+                <td>Engine Capacity :</td>
+                <td>{{ktmModel.engineCapacity}}</td>
+            </tr>
+            <tr>
+                <td>Max Power :</td>
+                <td>{{ktmModel.maxPower}}</td>
+            </tr>
+            <tr>
+                <td>Max Torque :</td>
+                <td>{{ktmModel.maxTorque}}</td>
+            </tr>
+            <tr>
+                <td>Mileage :</td>
+                <td>{{ktmModel.mileage}}</td>
+            </tr>
+            <tr>
+                <td>Cooling System :</td>
+                <td>{{ktmModel.coolingSystem}}</td>
+            </tr>
+            <tr>
+                <td>Fuel Tank Capacity :</td>
+                <td>{{ktmModel.fuelTankCapacity}}</td>
+            </tr>
+            <tr>
+                <td>Braking System :</td>
+                <td>{{ktmModel.brakingSystem}}</td>
+            </tr>
+            <th>{{ktmModel.onlyPrice}}</th>
+        </table>
+    </div>
+    <div class="btn">
+        <button class="btn btn-danger"><a style="color: black;" [routerLink]="['/ktm', ktmModel.name]">Book Now</a></button>
+    </div>
+</div>

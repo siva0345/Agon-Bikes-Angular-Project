@@ -1,0 +1,72 @@
+<form #registerForm="ngForm" (ngSubmit)="registration(registerForm.value)">
+  <div style="color: rgba(0, 0, 0, 0.683);font-weight: bolder;font-size: 25px;text-align: center;"><u>Customer Registration</u></div>
+  <br>
+  <br>
+  <table>
+      <tr>
+          <td>First Name </td>
+          <td>
+            <input style="width: 200px;" type="text" [(ngModel)]="firstName" name="firstName" #FName="ngModel" required minlength="3" maxlength="20">
+            <div *ngIf="FName.errors?.['required'] && FName.touched" style="color: red;"><p>please enter valid first name</p></div>
+            <div *ngIf="FName.errors?.['minlength'] && FName.touched" style="color: red;"><p>please enter at least 3 characters</p></div>
+            <div *ngIf="FName.errors?.['maxlength'] && FName.touched" style="color: red;"><p>please enter below 20 characters only</p></div>
+          </td>
+          <td >Last Name </td>
+          <td>
+            <input style="width: 200px;" type="text" [(ngModel)]="lastName" name="lastName" #LName="ngModel" required minlength="3" maxlength="20">
+            <div *ngIf="LName.errors?.['required'] && LName.touched" style="color: red;"><p>please enter valid last name</p></div>
+            <div *ngIf="LName.errors?.['minlength'] && LName.touched" style="color: red;"><p>please enter at least 3 characters</p></div>
+            <div *ngIf="LName.errors?.['maxlength'] && LName.touched" style="color: red;"><p>please enter below 20 characters only</p></div>
+          </td>
+          <br>
+      </tr>
+      <tr>
+          <td>Gender </td>
+          <td>
+            <input type="radio" value="M" [(ngModel)]="gender" name="gender"> Male &nbsp;
+            <input type="radio" value="F" [(ngModel)]="gender" name="gender"> Female &nbsp;
+            <input type="radio" value="Others" [(ngModel)]="gender" name="gender"> Others
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Birth </td>
+          <td><input type="text" placeholder="yyyy-mm-dd" [(ngModel)]="dateOfBirth" name="dateOfBirth"></td>
+        </tr>
+
+        <tr>
+          <td>Email</td>
+          <td>
+            <input type="text" [(ngModel)]="email" name="email" #EmailId="ngModel" 
+                   required minlength="5" maxlength="30" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+            <div *ngIf="EmailId.errors?.['required'] && EmailId.touched" style="color: red;"><p>Email is required</p></div>
+            <div *ngIf="EmailId.errors?.['minlength'] && EmailId.touched" style="color: red;"><p>Enter at least 10 characters</p></div>
+            <div *ngIf="EmailId.errors?.['maxlength'] && EmailId.touched" style="color: red;"><p>Enter below 30 characters only</p></div>
+            <div *ngIf="EmailId.errors?.['pattern'] && EmailId.touched" style="color: red;"><p>Enter a valid email address</p></div>
+          </td>
+        </tr>
+        <tr>
+          <td>Password</td>
+        <td>
+          <input type="{{ hidePassword ? 'password' : 'text' }}" [(ngModel)]="password" name="password" #Password="ngModel" required minlength="5" maxlength="20"
+            pattern="(?=.[!@#$%^&(),.?:{}|>])(?=.[A-Z]).">
+          <div *ngIf="Password.errors?.['required'] && Password.touched" style="color: red;"><p>Password is required</p></div>
+          <div *ngIf="Password.errors?.['minlength'] && Password.touched" style="color: red;"><p>Password must be at least 5 characters long</p></div>
+          <div *ngIf="Password.errors?.['maxlength'] && Password.touched" style="color: red;"><p>Password must be at most 20 characters long</p></div>
+          <div *ngIf="Password.errors?.['pattern'] && Password.touched" style="color: red;"><p>Password must contain at least one special character and one capital letter</p></div>
+          <input type="checkbox" (change)="togglePasswordVisibility()"> Show Password
+        </td>
+      </tr>
+        <tr>  
+          <td>Mobile Number </td>
+          <td><input type="number" [(ngModel)]="phone" name="phone"></td>
+        </tr>
+  </table>
+  <br>
+  <button style="margin: 0 auto; display: block; margin-top: 10px;" type="submit" ngModel>register</button>
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>

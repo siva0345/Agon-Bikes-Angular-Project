@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let royalenfield of royalenfield">
+        <div class="card">
+            <img class="card-img-top" src="{{royalenfield.url}}" alt="Card image">
+            <div class="card-body">
+                <div class="main">
+                <h3 class="card-title">{{royalenfield.name}}</h3>
+                <p class="card-text">{{royalenfield.matter}}</p>
+            </div>
+                <p class="text-right">
+                    <a href="#" class="btn btn-primary" [routerLink]="['/royalenfield', royalenfield.route]">Explore</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

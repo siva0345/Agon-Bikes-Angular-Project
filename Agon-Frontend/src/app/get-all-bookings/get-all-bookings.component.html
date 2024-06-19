@@ -1,0 +1,28 @@
+<h1 align="center" style="color: white;">Show Bookings</h1>
+
+<table border="2" align="center" style="color: white;">
+    <tr>
+        <th> Id </th>
+        <th> Full Name </th>
+        <th> Email </th>
+        <th> Mobile Number </th>
+        <th> Date Of Birth </th>
+        <th> Aadhar Number </th>
+        <th> State </th>
+        <th>City</th>
+        <th>Model</th>
+    </tr>
+
+    <tr *ngFor="let book of bookings">
+        <td>{{ book.id }} </td>
+        <td> {{ book.fullName}} </td>
+        <td> {{ book.email}} </td>
+        <td> {{ book.mobileNo}} </td>
+        <td> {{ book.dateOfBirth|date:'medium' }} </td>
+        <td> {{ book.adharNo }} </td>
+        <td> {{ book.state }} </td>
+        <td>{{book.city}}</td>
+        <td>{{ book.model}}</td>
+    </tr>
+</table>
+<br>

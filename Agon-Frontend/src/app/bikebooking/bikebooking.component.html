@@ -1,0 +1,111 @@
+<form #bookNow="ngForm" (ngSubmit)="bikeBooking(bookNow.value)">
+    <table>
+        <tr>
+            <td>Full Name :</td>
+            <td>
+                <input type="text" [(ngModel)]="fullName" name="fullName" #FName="ngModel" required minlength="3"
+                    maxlength="20">
+                <div *ngIf="FName.errors?.['required'] && FName.touched" style="color: red;">
+                    <p>please enter valid full name</p>
+                </div>
+                <div *ngIf="FName.errors?.['minlength'] && FName.touched" style="color: red;">
+                    <p>please enter at least 3 characters</p>
+                </div>
+                <div *ngIf="FName.errors?.['maxlength'] && FName.touched" style="color: red;">
+                    <p>please enter below 20 characters only</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Email </td>
+            <td><input type="text" [(ngModel)]="email" name="email" #EmailId="ngModel" required minlength="10"
+                    maxlength="20">
+                <div *ngIf="EmailId.errors?.['required'] && EmailId.touched" style="color: red;">
+                    <p>please enter valid email</p>
+                </div>
+                <div *ngIf="EmailId.errors?.['minlength'] && EmailId.touched" style="color: red;">
+                    <p>please enter at least 10 characters</p>
+                </div>
+                <div *ngIf="EmailId.errors?.['maxlength'] && EmailId.touched" style="color: red;">
+                    <p>please enter below 20 characters only</p>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Mobile Number : </td>
+            <td><input type="number" [(ngModel)]="mobileNo" name="mobileNo" #MobileNo="ngModel" required minlength="10"
+                    maxlength="10">
+                <div *ngIf="MobileNo.errors?.['required'] && MobileNo.touched" style="color: red;">
+                    <p>please enter valid Mobile number</p>
+                </div>
+                <div *ngIf="MobileNo.errors?.['minlength'] && MobileNo.touched" style="color: red;">
+                    <p>please enter 10 characters</p>
+                </div>
+
+            </td>
+        </tr>
+        <tr>
+            <td>Date of Birth </td>
+            <td><input type="text" placeholder="yyyy-mm-dd" [(ngModel)]="dateOfBirth" name="dateOfBirth"></td>
+        </tr>
+
+
+        <tr>
+            <td>Adhar Number : </td>
+            <td><input type="number" [(ngModel)]="adharNo" name="adharNo" #AdharNo="ngModel" required minlength="12"
+                    maxlength="12">
+                <div *ngIf="AdharNo.errors?.['required'] && AdharNo.touched" style="color: red;">
+                    <p>please enter valid adhar number</p>
+                </div>
+                <div *ngIf="AdharNo.errors?.['minlength'] && AdharNo.touched" style="color: red;">
+                    <p>please enter 12 numbers</p>
+                </div>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>State : </td>
+            <td><input type="text" placeholder="Enter your state" [(ngModel)]="state" name="state"></td>
+        </tr>
+        <tr>
+            <td>City : </td>
+            <td><input type="text" placeholder="Enter your city" [(ngModel)]="city" name="city"></td>
+        </tr>
+        <tr>
+            <td>Motorcycle Model:</td>
+            <td>
+                <select id="motorcycle_model" class="form-control" name="motorcycle_model" required [(ngModel)]="model">
+                    <option value="Bajaj Dominar 400">Bajaj Dominar 400</option>
+                    <option value="Bajaj Dominar 250">Bajaj Dominar 250</option>
+                    <option value="Bajaj Pulsar N250">Bajaj Pulsar N250</option>
+                    <option value="Bajaj Pulsar F250">Bajaj Pulsar F250</option>
+                    <option value="Bajaj Pulsar 220F">Bajaj Pulsar 220F</option>
+                    <option value="Bajaj Pulsar RS200">Bajaj Pulsar RS200</option>
+                    <option value="Bajaj Pulsar NS200">Bajaj Pulsar NS200</option>
+                    <option value="Bajaj Pulsar N160">Bajaj Pulsar N160</option>
+                    <option value="Bajaj Pulsar NS160">Bajaj Pulsar NS160</option>
+                    <option value="Bajaj Pulsar NS150">Bajaj Pulsar NS150</option>
+                    <option value="Bajaj Avenger StreetFighter 160">Bajaj Avenger StreetFighter 160</option>
+                    <option value="Bajaj Pulsar 150">Bajaj Pulsar 150</option>
+                    <option value="Bajaj Pulsar NS125">Bajaj Pulsar NS125</option>
+                    <option value="Bajaj Pulsar 125">Bajaj Pulsar 125</option>
+                    <option value="Bajaj CT 125X">Bajaj CT 125X</option>
+                    <option value="Bajaj Platina 110">Bajaj Platina 110</option>
+                    <option value="Bajaj Chetak">Bajaj Chetak</option>
+                    <option value="KTM Duke 390">KTM Duke 390</option>
+                    <option value="KTM RC 390">KTM RC 390</option>
+                    <option value="KTM Duke 250">KTM Duke 250</option>
+                    <option value="KTM RC 200">KTM RC 200</option>
+                    <option value="KTM Duke 200">KTM Duke 200</option>
+                    <option value="Royal Enfield GT 650">Royal Enfield GT 650</option>
+                    <option value="Royal Enfield Classic 350">Royal Enfield Classic 350</option>
+                    <option value="Royal Enfield Shotgun 650">Royal Enfield Shotgun 650</option>
+                    <option value="model23">Royal Enfield Hunter 350</option>
+                </select>
+                <div class="invalid-feedback">Please select a motorcycle model.</div>
+            </td>
+        </tr>
+    </table>
+    <button style="margin-left: 125px; margin-top: 10px;" type="submit" ngModel>Book Now</button>
+</form>

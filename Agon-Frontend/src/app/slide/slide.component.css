@@ -1,0 +1,67 @@
+.bikeFeature .container {
+    display: flex;
+    overflow-x: auto; 
+  }
+  
+  .bikeFeature li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    color: white;
+  }
+  
+  .bikeFeature li .circle_shadow {
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.2); 
+    padding: 10px;
+  }
+  
+  .bikeFeature li img {
+    width: 40px;
+    height: 40px;
+    border: none; 
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+  .bikeFeature li img:hover {
+    transform: scale(1.3);
+  }
+  
+  .icon_description {
+    text-align: left;
+  }
+  
+  .icon_description span {
+    font-weight: bold;
+  }
+  
+  .icon_description p {
+    margin: 0;
+  }
+  
+  .carousel {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+  
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+  }
+  ul{
+    list-style-type: none;
+    display: inline-flex;
+  }
+  ul li{
+    border: 1px solid white transparent;
+    margin-right: 60px;
+    padding: 10px;
+  }
+  ul li div{
+    border: 1px solid white transparent;
+    width: 145px;
+  }
+  

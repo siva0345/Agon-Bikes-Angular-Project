@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: rgba(247, 243, 243, 0.896);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+
+}
+
+.image {
+  text-align: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.body {
+  margin-top: 20px;
+}
+
+.body p {
+  line-height: 1.6;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+th.center {
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  margin-top: 20px;
+  margin-left: 250px;
+}
+
+.btn button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc3545;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn button:hover {
+  background-color: #c82333;
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+      width: 90%;
+  }
+  table {
+      font-size: 14px;
+  }
+  .btn button {
+      font-size: 14px;
+  }
+}

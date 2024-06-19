@@ -1,0 +1,8 @@
+<form #form="ngForm" (ngSubmit)="login(form.value)">
+    Email ID: <input type="text"    name="email" [(ngModel)]="email" /> <br/>
+    Password: <input type="password" name="password" [(ngModel)]="password" /> <br/>
+<input type="submit" value="Login"> 
+
+  <asl-google-signin-button></asl-google-signin-button>
+    
+</form>

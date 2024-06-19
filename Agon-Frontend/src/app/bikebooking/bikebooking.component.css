@@ -1,0 +1,74 @@
+/* Apply general styles to the form */
+form {
+  width: 60%;
+  margin: 0 auto;
+  color: #ddd;
+  display: flex; /* Use flexbox for centering */
+  flex-direction: column; /* Align children vertically */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Style table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+/* Style table cells */
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+/* Style input fields */
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Style submit button */
+button[type="submit"] {
+  width: auto;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px; /* Add top margin for spacing */
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Error message style */
+p.error-message {
+  color: red;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+/* Highlight invalid input */
+input.ng-invalid {
+  border-color: red;
+}
+
+/* Hide the select dropdown arrow */
+select::-ms-expand {
+  display: none;
+}
+
+/* Style invalid feedback */
+.invalid-feedback {
+  color: red;
+  margin-top: 5px;
+  font-size: 14px;
+}

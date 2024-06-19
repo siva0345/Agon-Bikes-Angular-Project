@@ -1,0 +1,26 @@
+<h1 align="center" style="color: white;">Show Bookings</h1>
+
+<table border="2" align="center" style="color: white;">
+    <tr>
+        <th> Id </th>
+        <th> Full Name </th>
+        <th> Email </th>
+        <th> servicedate </th>
+        <th> state </th>
+        <th> City </th>
+        <th> Bike Model </th>
+
+    </tr>
+
+    <tr *ngFor="let bikeService of bikeServiceList">
+        <td>{{ bikeService.id }} </td>
+        <td> {{ bikeService.fullName}} </td>
+        <td> {{ bikeService.email}} </td>
+        <td> {{ bikeService.servicedate}} </td>
+        <td> {{ bikeService.state}} </td>
+        <td> {{ bikeService.city }} </td>
+        <td> {{ bikeService.bikemodel }} </td>
+        
+    </tr>
+</table>
+<br>

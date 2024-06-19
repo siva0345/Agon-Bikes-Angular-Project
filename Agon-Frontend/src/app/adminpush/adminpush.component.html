@@ -1,0 +1,92 @@
+<form #regBike="ngForm" (ngSubmit)="addBike(regBike)" *ngIf="getAdminLoggedStatus()">
+    <h1 style="color: rgb(244, 30, 30);" class="form-title">Add Bikes</h1>
+    <div class="form-container">
+      <table class="form-table">
+        <tr>
+          <td>Bike Name:</td>
+          <td><input type="text" name="name" ngModel #name="ngModel" required></td>
+        </tr>
+        <tr>
+          <td>URL:</td>
+          <td><input type="text" name="url" ngModel #url="ngModel" required></td>
+        </tr>
+        <tr>
+          <td>Bike Description:</td>
+          <td><input type="text" name="matter" ngModel #matter="ngModel" required></td>
+        </tr>
+        <tr>
+          <td>Bike Route Name:</td>
+          <td><input type="text" name="route" ngModel #route="ngModel" required></td>
+        </tr>
+      </table>
+  
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Add Bike</button>
+      </div>
+    </div>
+  </form>
+
+
+
+  <form #delBike="ngForm" (ngSubmit)="deleteBike(delBike)" *ngIf="getAdminLoggedStatus()">
+    <h1 class="form-title" style="color: rgb(244, 30, 30);">Delete Bike</h1>
+    <div class="form-container">
+      <table class="form-table">
+        <tr>
+          <td>Bike Name:</td>
+          <td><input type="text" name="name" ngModel #name="ngModel" required></td>
+        </tr>
+      </table>
+  
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">Delete Bike</button>
+      </div>
+    </div>
+  </form>
+  
+  
+
+
+
+
+
+<!-- 
+<table border="1" align="center">
+    <tr>
+        <th>ID</th>
+        <th>Bike Name</th>
+        <th>Bike Description</th>
+        <th>Bike Router Name</th>
+
+    </tr>
+
+    <tr *ngFor="let bike of bikes">
+        <td>{{ bike.id }}</td>
+        <td>{{ bike.name }}</td>
+        <td>{{ bike.matter }}</td>
+        <td>{{ bike.route }}</td>
+        <td>
+            <button type="button" (click)="editBike(bike)">Edit</button>
+            <button type="button" (click)="deleteBike(bike.name)">Delete</button>
+        </td>
+    </tr>
+</table>
+
+<div *ngIf="isEditing">
+    <h2>Edit Bike</h2>
+    <form (ngSubmit)="updateBike()">
+        <div>
+            <label>Bike Name:</label>
+            <input type="text" [(ngModel)]="editedBike.name" name="name" required>
+        </div>
+        <div>
+            <label>Bike Description:</label>
+            <input type="text" [(ngModel)]="editedBike.matter" name="matter" required>
+        </div>
+        <div>
+            <label>Route:</label>
+            <input type="text" [(ngModel)]="editedBike.route" name="route" required>
+        </div>
+        <button type="submit">Update</button>
+    </form>
+</div> -->

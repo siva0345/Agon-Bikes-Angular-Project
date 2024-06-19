@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let ktm of ktm">
+        <div class="card">
+            <img class="card-img-top" src="{{ktm.url}}" alt="Card image">
+            <div class="card-body">
+                <div class="main">
+                    <h3 class="card-title">{{ktm.name}}</h3>
+                    <p class="card-text">{{ktm.matter}}</p>
+                </div>
+                <p class="text-right">
+                    <a href="#" class="btn btn-primary" routerLink="/ktm/{{ ktm.name }}">Explore</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+/* Card container */
+.card {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Align items vertically */
+    height: 100%; /* Ensure the card takes full height */
+}
+
+/* Card body */
+.card-body {
+    flex-grow: 1; /* Allow the body to grow to fill remaining space */
+}
+
+/* Card image */
+.card-img-top {
+    border: 5px solid black transparent;
+    height: 300px;
+    width: 372.5px;
+    border-top-left-radius: 5px; /* Rounded corners for the image */
+    border-top-right-radius: 5px;
+}
+
+/* Card title */
+.card-title {
+    font-size: 1.2rem; /* Larger title */
+    margin-top: 10px; /* Add some space between title and image */
+}
+
+/* Card text */
+.card-text {
+    font-size: 1rem; /* Regular font size */
+    color: #555; /* Darker text color */
+}
+
+/* Explore button */
+.btn-primary {
+    background-color: #007bff; /* Blue button */
+    border-color: #007bff;
+    color: #fff; /* White text */
+    text-decoration: none; /* Remove underlines */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
+}
+.main{
+    border: 1px solid black transparent;
+    height: 150px;
+    width: fit-content;
+}
